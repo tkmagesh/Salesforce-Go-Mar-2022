@@ -128,4 +128,12 @@ func main() {
 	)
 	fmt.Println("red =", red, "green =", green, "blue =", blue)
 
+	const (
+		v1 = (iota + 1) * 2
+		v2
+		v3
+	)
+
+	fmt.Println(v1, v2, v3)
+
 }
