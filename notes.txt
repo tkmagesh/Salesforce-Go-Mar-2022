@@ -1,0 +1,13 @@
+Magesh Kuppan
+
+About you:
+    Name
+    Primary Skillset
+    Experience in Golang
+    Any specific expectations?
+
+Methodology
+    No powerpoint
+    Lots of handson
+
+    
