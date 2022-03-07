@@ -140,3 +140,7 @@ Assignment-1 (Console based calculator)
     If the user enters any other choice 
         display "Invalid choice" 
         display the menu again.
+
+
+Functions
+    a. variadic functions
