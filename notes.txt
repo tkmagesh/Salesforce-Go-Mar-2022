@@ -10,4 +10,91 @@ Methodology
     No powerpoint
     Lots of handson
 
+Repository
+    https://github.com/tkmagesh/salesforce-go-mar-2022
+
+Software Requirements
+    1. Go tools (https://golang.org)
+    2. Visual Studio Code (https://code.visualstudio.com)
+
+Schedule
+    Tea Break   : T + 1:30 hrs (15 mins)
+    Lunch       : T + 3:30 hrs    (45 mins)
+    Tea Break   : Lunch + 1:30 hrs (15 mins)
+
+VSCode Setup
+=============
+Install the "Go" extension for Visual Studio Code (https://code.visualstudio.com/docs/go/getting-started)
+
+CMD + SHIFT + P 
+OR
+CTRL + SHIFT + P
+
+type : go: install
+Select all the tools in the subsequent dialog box and click "OK"
+
+Why Go?
+
+As of 2014
+    Java (~20 years)
+    C# (~17 years)
+    python (~10 years)
+    Ruby (~15 years)
+    C++ (~25 years)
+    C
+
+    Go (~5 years)
+
+1. Faster execution time
+2. Export binary
+3. Easier (compared to python)
+4. Designed for the cloud
+5. Concurrency
+
+Paradox of Choice
+    Barry Shwatz
+
+1. Simplicity
+    - ONLY 25 keywords
+    - No access modifiers
+    - No classes (only structs & functions)
+    - No inheritance (only composition)
+    - No exceptions (only errors)
+    - No generics (as of 1.17)
+    - No reference types (everything is a value type)
+    - Pointers are supported (But no pointer arithmetic)
+    - Has a garbage collector
+
+2. Performance
+    - Equivalent to C++
+    - Go compiler is written in Go
+
+3. Concurrency
+    - Go is built FOR concurrency
+    - goroutines
+        - 4 KB ONLY
+    - Language constructs for concurrency
+        go, select, range, channel (data type), <- operator
+
+
+
+Thread t = new System.Threading.Thread(() => {
+    // code
+});
+t.Start();
+
+go fn()
+
+To run a go program
+    go run <file_name.go>
+
+To create a build
+    go build <file_name.go>
+
+To list the OS and architechture
+    go tool dist list
+
+To create a build for a different OS and architechture
+    GOOS=windows GOARCH=386 go build -o <file_name> <file_name.go>
+
     
