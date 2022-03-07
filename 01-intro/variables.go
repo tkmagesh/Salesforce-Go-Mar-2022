@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+var app_name = "My App"
+
 func main() {
 	/*
 		var msg string
@@ -89,4 +91,41 @@ func main() {
 	x, y, str := 100, 200, "Result ="
 	result := x + y
 	fmt.Println(str, result)
+
+	//constants
+	const pi = 3.14
+
+	//iota
+	/*
+		const (
+			red   = iota
+			green = iota
+			blue  = iota
+		)
+	*/
+
+	/*
+		const (
+			red = iota
+			green
+			blue
+		)
+	*/
+
+	/*
+		const (
+			red = iota + 5
+			green
+			blue
+		)
+	*/
+
+	const (
+		red = iota + 5
+		green
+		_
+		blue
+	)
+	fmt.Println("red =", red, "green =", green, "blue =", blue)
+
 }

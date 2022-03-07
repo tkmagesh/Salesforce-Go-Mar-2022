@@ -61,6 +61,7 @@ Paradox of Choice
     - No inheritance (only composition)
     - No exceptions (only errors)
     - No generics (as of 1.17)
+    - No implicit type conversion
     - No reference types (everything is a value type)
     - Pointers are supported (But no pointer arithmetic)
     - Has a garbage collector
