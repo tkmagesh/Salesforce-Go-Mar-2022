@@ -50,7 +50,15 @@ func divide(x, y int) (int, int) {
 }
 */
 
+/*
 func divide(x, y int) (quotient int, remainder int) {
+	quotient = x / y
+	remainder = x % y
+	return
+}
+*/
+
+func divide(x, y int) (quotient, remainder int) {
 	quotient = x / y
 	remainder = x % y
 	return
