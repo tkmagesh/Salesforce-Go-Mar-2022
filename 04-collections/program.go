@@ -104,6 +104,10 @@ func main() {
 	delete(productRank, "Stylus")
 	fmt.Println("After deleting \"stylus\", productRank = ", productRank)
 
+	//nested maps
+	productCategory := map[string]map[string]int{}
+	productCategory["Stationary"] = map[string]int{"Pen": 1, "Pencil": 2}
+	productCategory["Utencil"] = map[string]int{"Pan": 1, "Bowl": 3}
 }
 
 func printProducts(products ...string) {
