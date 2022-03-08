@@ -157,4 +157,5 @@ Collection Types
     b. slice
         dynamic size collection of elements of the same type
     c. map
+        typed key/value collection OR dictionary OR hash table
     
