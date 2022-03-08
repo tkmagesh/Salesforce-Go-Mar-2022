@@ -15,7 +15,7 @@ func main() {
 		return
 	}
 	if err != nil {
-		fmt.Println("something went wrong")
+		fmt.Println(err)
 		return
 	}
 	fmt.Println(q, r)
