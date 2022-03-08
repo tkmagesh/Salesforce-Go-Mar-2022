@@ -179,3 +179,27 @@ Modules introduced in GO 1.13
     
     To create a go.mod file
         go mod init <module_name>
+
+    To install a package
+        go get <package_name>
+        ex:
+            go get github.com/fatih/color
+
+    To update the mod file (based on the usage of the modules in our application)
+        go mod tidy
+
+    To download the dependencies
+        go mod download
+
+    To localize the dependencies 
+        go mod vendor
+
+    To create a build
+        go build .
+        
+    go mod command documentation
+        https://go.dev/ref/mod
+
+
+
+    
