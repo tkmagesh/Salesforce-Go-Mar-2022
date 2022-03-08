@@ -13,6 +13,7 @@ type Product struct {
 func main() {
 	//var pen Product
 	//var pen Product = Product{100, "Pen", 10, 100, "Stationary"}
+	//var pen = Product{100, "Pen", 10, 100, "Stationary"}
 	//pen := Product{100, "Pen", 10, 100, "Stationary"}
 	//pen := Product{Id: 100, Name: "Pen", Cost: 10, Units: 100}
 	/*
