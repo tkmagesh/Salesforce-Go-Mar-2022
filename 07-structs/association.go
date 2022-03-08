@@ -30,9 +30,11 @@ func main() {
 		Name: "Magesh",
 		Org:  salesForce,
 	}
-	salesForce.City = "New York"
+	//salesForce.City = "New York"
+	//emp1.Org.City = "NewYork"
 	fmt.Printf("%#v\n", emp1)
 	fmt.Printf("%#v\n", emp2)
+	emp1.Org.City = "New York"
 	fmt.Println(emp1.Org.City)
 	fmt.Println(emp2.Org.City)
 }
