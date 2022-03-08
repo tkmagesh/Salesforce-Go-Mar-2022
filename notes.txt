@@ -159,3 +159,23 @@ Collection Types
     c. map
         typed key/value collection OR dictionary OR hash table
     
+Modularity
+github.com/tkmagesh/myapp
+Before 1.13
+    GOPATH
+        bin
+        pkg
+        src
+            github.com
+                tkmagesh
+                    myapp
+
+Modules introduced in GO 1.13
+    go.mod
+        metatdata for the application
+            module name
+            go runtime version
+            dependencies
+    
+    To create a go.mod file
+        go mod init <module_name>
