@@ -149,3 +149,12 @@ Functions
         * functions can be assigned to variables
         * functions can be passed as arguments to other functions
         * functions can be returned by other functions
+    d. deferred functions
+
+Collection Types
+    a. array
+        fixed size collection of elements of the same type
+    b. slice
+        dynamic size collection of elements of the same type
+    c. map
+    
