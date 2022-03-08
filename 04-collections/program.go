@@ -52,4 +52,14 @@ func main() {
 		fmt.Printf("products[%d] = %s\n", idx, product)
 	}
 
+	printProducts(products...)
+	//printProducts("Pen", "Pencil")
+
+}
+
+func printProducts(products ...string) {
+	fmt.Println("List of products")
+	for _, product := range products {
+		fmt.Println(product)
+	}
 }
