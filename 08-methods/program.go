@@ -1,17 +1,12 @@
 package main
 
-import "fmt"
-
-type Product struct {
-	Id       int
-	Name     string
-	Cost     float32
-	Units    int
-	Category string
-}
+import (
+	"fmt"
+	"methods-demo/models"
+)
 
 func main() {
-	pen := &Product{
+	pen := &models.Product{
 		Id:       100,
 		Name:     "Pen",
 		Cost:     10,
@@ -26,13 +21,9 @@ func main() {
 	//(&pen).ApplyDiscount(10)
 	pen.ApplyDiscount(10)
 	fmt.Println(pen.Format())
-}
 
-func (p Product) Format() string {
-	return fmt.Sprintf("Id = %d, Name = %s, Cost = %f, Units = %d, Category = %s", p.Id, p.Name, p.Cost, p.Units, p.Category)
-}
-
-func (product *Product) ApplyDiscount(discountPercentage float32) {
-	//(*product).Cost = (*product).Cost * ((100 - discountPercentage) / 100)
-	product.Cost = product.Cost * ((100 - discountPercentage) / 100)
+	//composition (methods)
+	grapes := models.NewPerishableProduct(201, "Grapes", 40, 10, "Fruits", "4 Days")
+	//fmt.Println(grapes.Product.Format())
+	fmt.Println(grapes.Format())
 }
