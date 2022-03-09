@@ -201,5 +201,6 @@ Modules introduced in GO 1.13
         https://go.dev/ref/mod
 
 
-
+Interfaces
+    IMPORTANT : interface implementation is "IMPLICIT"
     
