@@ -23,6 +23,10 @@ func (c Circle) Perimeter() float32 {
 	return 2 * math.Pi * c.Radius
 }
 
+func (c Circle) Name() string {
+	return "Circle"
+}
+
 //Day-2
 type Rectangle struct {
 	Height float32
@@ -35,6 +39,10 @@ func (r Rectangle) Area() float32 {
 
 func (r Rectangle) Perimeter() float32 {
 	return 2 * (r.Height + r.Width)
+}
+
+func (r Rectangle) Name() string {
+	return "Rectangle"
 }
 
 //Day-3
@@ -55,6 +63,10 @@ func PrintPerimeter(sp ShapeWithPerimeter) {
 	fmt.Printf("Perimeter = %f\n", sp.Perimeter())
 }
 
+type Nameable interface {
+	Name() string
+}
+
 //Day-5
 /* Interface composition */
 type Shape interface {
@@ -67,19 +79,32 @@ func PrintShape(s Shape) {
 	PrintPerimeter(s)
 }
 
+//Printing shapes with Name
+type ShapeWithName interface {
+	Nameable
+	Shape
+}
+
+func PrintShapeWithName(sn ShapeWithName) {
+	fmt.Println("Name = ", sn.Name())
+	PrintShape(sn)
+}
+
 func main() {
 	c := Circle{Radius: 12}
 	/*
 		PrintArea(c)
 		PrintPerimeter(c)
 	*/
-	PrintShape(c)
+	//PrintShape(c)
+	PrintShapeWithName(c)
 
 	r := Rectangle{Height: 10, Width: 12}
 	/*
 		PrintArea(r)
 		PrintPerimeter(r)
 	*/
-	PrintShape(r)
+	//PrintShape(r)
+	PrintShapeWithName(r)
 
 }
