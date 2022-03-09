@@ -204,3 +204,9 @@ Modules introduced in GO 1.13
 Interfaces
     IMPORTANT : interface implementation is "IMPLICIT"
     
+
+Concurrency
+    Channel
+        Read operation is ALWAYS a blocking operation 
+        Write operation can succeed ONLY when a read operation is already initiated (conditions apply)
+            If the read operation is NOT initiated, the write operation will block
