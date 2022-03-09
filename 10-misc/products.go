@@ -38,6 +38,26 @@ func (products Products) Swap(i, j int) {
 	products[i], products[j] = products[j], products[i]
 }
 
+type ByName struct {
+	Products
+}
+
+func (byName ByName) Less(i, j int) bool {
+	return byName.Products[i].Name < byName.Products[j].Name
+}
+
+/*
+func Sort(data sort.Interface) {
+	for i := 0; i < data.Len()-1; i++ {
+		for j := i + 1; j < data.Len(); j++ {
+			if !data.Less(i, j) {
+				data.Swap(i, j)
+			}
+		}
+	}
+}
+*/
+
 func main() {
 	products := Products{
 		Product{105, "Pen", 5, 50, "Stationary"},
@@ -54,4 +74,9 @@ func main() {
 	fmt.Println(" => Default Sort")
 	sort.Sort(products)
 	products.Print()
+
+	fmt.Println(" => Sort by Name")
+	sort.Sort(ByName{products})
+	products.Print()
+
 }
