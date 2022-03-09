@@ -18,10 +18,10 @@ func main() {
 }
 
 func f1(id int, wg *sync.WaitGroup) {
+	defer wg.Done()
 	fmt.Printf("f1[%d] started\n", id)
 	time.Sleep(5 * time.Second)
 	fmt.Printf("f1[%d] completed\n", id)
-	wg.Done()
 }
 
 func f2() {
