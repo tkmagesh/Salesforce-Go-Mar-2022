@@ -63,10 +63,6 @@ func PrintPerimeter(sp ShapeWithPerimeter) {
 	fmt.Printf("Perimeter = %f\n", sp.Perimeter())
 }
 
-type Nameable interface {
-	Name() string
-}
-
 //Day-5
 /* Interface composition */
 type Shape interface {
@@ -80,6 +76,11 @@ func PrintShape(s Shape) {
 }
 
 //Printing shapes with Name
+
+type Nameable interface {
+	Name() string
+}
+
 type ShapeWithName interface {
 	Nameable
 	Shape
