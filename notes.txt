@@ -208,5 +208,5 @@ Interfaces
 Concurrency
     Channel
         Read operation is ALWAYS a blocking operation 
-        Write operation can succeed ONLY when a read operation is already initiated (conditions apply)
+        Write operation can succeed ONLY when a read operation is already initiated (Non buffered channel)
             If the read operation is NOT initiated, the write operation will block
