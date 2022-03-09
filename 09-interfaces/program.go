@@ -5,6 +5,11 @@ import (
 	"math"
 )
 
+/* Perimeter
+Circle = 2 *Pi *R
+Rectangle = 2 * (height + Width)
+*/
+
 //Day-1
 type Circle struct {
 	Radius float32
@@ -34,10 +39,16 @@ func PrintArea(sa ShapeWithArea) {
 	fmt.Printf("Area = %f\n", sa.Area())
 }
 
+func PrintPerimeter( /*  */ ) {
+	fmt.Printf("Perimeter = %f\n" /*  */)
+}
+
 func main() {
 	c := Circle{Radius: 12}
 	PrintArea(c)
+	PrintPerimeter(c)
 
 	r := Rectangle{Height: 10, Width: 12}
 	PrintArea(r)
+	PrintPerimeter(r)
 }
